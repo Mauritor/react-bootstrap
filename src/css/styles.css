@@ -4,3 +4,17 @@
 .separador{
     margin-top: 4rem;
 }
+.content-main{
+    background-image: url(https://computacioninteractiva.com/wp-content/uploads/2019/07/INVERTIR-EN-TECNOLOGIA.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.content-main-text{
+    font-size: 3rem;
+    color: #fcfcfc;
+}
