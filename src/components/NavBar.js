@@ -17,7 +17,7 @@ const NavBar = (props) => {
                             <NavDropdown.Item><Link to="/top2020">Top-2020</Link></NavDropdown.Item>
                             <NavDropdown.Item><Link to="/top2020">Top-2020</Link></NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item><Link to="/top2020">Top-2020</Link></NavDropdown.Item>
+                            <NavDropdown.Item className={props.statusCreate}><Link to="/formCreateNew">Create New</Link></NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Nav>
