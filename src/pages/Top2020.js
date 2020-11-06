@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import {Container, Row, Col, Card } from 'react-bootstrap';
-import NavBar from './NavBar'
+import NavBar from '../components/NavBar'
 
 const Top2020 = () => {
     const [items, setItems] = useState([]);

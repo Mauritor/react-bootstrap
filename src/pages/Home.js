@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import NavBar from './NavBar'
-import ImageMain from './ImageMain'
-import SectionLazy from './SectionLazy';
+import NavBar from '../components/NavBar'
+import ImageMain from '../components/ImageMain'
+import SectionLazy from '../components/SectionLazy';
 
 const Home = () => {
     return (

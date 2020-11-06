@@ -6,7 +6,7 @@ import NavBar from './NavBar'
 const FormFirst = () => {
     const { register, errors, handleSubmit } = useForm();
     const [messageError, setMessageError] = useState('');
-    const createDisco = async (data) => {
+    const createDisco =  (data) => {
         try {
             console.log(data);
             localStorage.setItem('DISCO', JSON.stringify(data))
@@ -22,7 +22,7 @@ const FormFirst = () => {
     }
     return (
         <Fragment>
-            <NavBar statusCreate={'fondoActivo'} />
+            <NavBar />
             <Container className="mt-5 mb-5">
                 <h2 className="text-primary separador">Create New Record</h2>
                 <span className="text-danger text-small d-block mb-2">
