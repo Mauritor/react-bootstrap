@@ -7,7 +7,10 @@ const años = [
     { año: 2021 },
     { año: 2022 },
     { año: 2023 }
-]
+];
+const exelent = "text-success"
+const good = "text-warning"
+const bad = "text-danger"
 
 const FormDisco = () => {
     const { register, errors, watch, handleSubmit } = useForm();
@@ -63,10 +66,7 @@ const FormDisco = () => {
                                 autoComplete="off"
                                 className="mt-3"
                                 ref={register({
-                                    required: {
-                                        value: true,
-                                        message: 'Artist es requerido'
-                                    }
+                                    required: { value: true, message: 'Artist es requerido' }
                                 })}
                             />
                             <span className="text-danger text-small d-block mb-2">
@@ -81,10 +81,7 @@ const FormDisco = () => {
                                 autoComplete="off"
                                 className="mt-3"
                                 ref={register({
-                                    required: {
-                                        value: true,
-                                        message: 'Album es requerido'
-                                    }
+                                    required: { value: true, message: 'Album es requerido' }
                                 })}
                             />
                             <span className="text-danger text-small d-block mb-2">
@@ -96,10 +93,7 @@ const FormDisco = () => {
                             <Form.Control as="select" custom
                                 name="year"
                                 ref={register({
-                                    required: {
-                                        value: false,
-                                        message: 'Year es requerido'
-                                    }
+                                    required: { value: false, message: 'Year es requerido' }
                                 })}>
                                 <option value="2020">2020</option>
                                 {años.map((item, i) => (
@@ -113,10 +107,7 @@ const FormDisco = () => {
                                 as="select" custom
                                 name="country"
                                 ref={register({
-                                    required: {
-                                        value: false,
-                                        message: 'Country es requerido'
-                                    }
+                                    required: { value: false, message: 'Country es requerido' }
                                 })}
                             >
                                 <option value={-1}>Country</option>
@@ -132,8 +123,16 @@ const FormDisco = () => {
                                 }
                             </Form.Control>
                         </Col>
-                        <Col sm={12} md={{span: 8, offset: 2}} className="mt-3">
-                            <Form.Label>Score: {<span className="text-primary">{watchAll.score}</span>} </Form.Label>
+                        <Col sm={12} md={{ span: 8, offset: 2 }} className="mt-3">
+                            <Form.Label>{<h3 className={
+                                watchAll.score >= 80 ? exelent:
+                                watchAll.score >= 51 ? good : bad 
+                                }
+                            >
+                               Score: {watchAll.score}
+                            </h3>
+                            }
+                            </Form.Label>
                             <Form.Control
                                 type="range"
                                 step="1"
@@ -141,10 +140,7 @@ const FormDisco = () => {
                                 max="100"
                                 name="score"
                                 ref={register({
-                                    required: {
-                                        value: true,
-                                        message: 'Score es requerido'
-                                    }
+                                    required: { value: true, message: 'Score es requerido' }
                                 })}
                             >
                             </Form.Control>
